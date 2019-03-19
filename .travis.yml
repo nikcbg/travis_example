@@ -3,3 +3,11 @@ dist: xenial
 sudo: required
 script:
 - bash test.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: ORPi2GFjO9DEPislZxbdBc1yVZ/Ls7F1PHqtiRt4zQ3j/ASsskxvHTlt0jzlr9df9kBK05hEcT+wVomkzAwP1QFS9GDpcO/mzZq6t/rYX76d9CGmxlUSN5IhEdoJPWCTzomADvb61u9UF7DZRHzgsLgfXistUoPdFj5tTNImeEfkNDaQ+d/2QLKcH7OCQ+6nYitWh7SYo7odxZykEo6WyJCxnJqvawEagnkmLEt9jck7aQ1L4pB5uqd9/6cI2o2MEEpXwUY8Es+pzMjPl22/lX45dcpiXUcxorPIzxkeu4pn5bX0nOmKgl2DyubN6Mne9TRFeP/zUjhY4BDVDcBwUS/B9v+G2uKlX1Q35E0iQ0326qasGIQ2sA9oS9XhUzffvaRu+5DeiFPhANtwJv4W/BXCU1zRtKhmNLQmt2f/XiFy0oJlorEUf82+KXLu2YmeaUxBxcnop86M3e2sZq/axwMso5hN1d/JSVgFWxWuNyaG7vx5mdA0wF/10ut+foGV8DJaxwtzx1jlxh6b6YFJ9dx1fhDswdaz+wwq95Pu5FdkJawaJAoJr083+t96MSrski8UEUFNhEh9x7l7GpoxS7p/JsWi5hUXtiwgGS2oUHo3opGQ7yNXiVxmEAMg73CLNAI2f3FX1mKPSW0jMRWLvKvRMdX1RFBNA75IWEuA7+Q=
+  file: hello.sh
+  on:
+    repo: nikcbg/travis_example
+    tags: true
